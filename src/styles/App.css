@@ -1,0 +1,7 @@
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 1050px;
+  height: 550px;
+  /* background-color: rgb(241, 239, 255); */
+}

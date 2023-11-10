@@ -1,0 +1,39 @@
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+.title {
+    text-align: center;
+}
+
+.textarea {
+    width: 800px;
+    margin: auto;
+    resize: none;
+}
+
+.textarea:hover {
+    cursor: pointer;
+}
+
+.form-btn {
+    position: absolute;
+    right: 113px;
+    bottom: 3px;
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    background-color: rgb(65, 43, 190);
+    color: white;
+}
+
+.form-btn:hover {
+    background-color: rgb(143, 131, 214);
+    cursor: pointer;
+}

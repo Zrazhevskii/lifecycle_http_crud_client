@@ -1,0 +1,45 @@
+.notes-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 900px;
+    min-height: 250px;
+    background-color: aliceblue;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.title-notes {
+    display: flex;
+    flex-direction: row;
+    min-width: 120px;
+    height: 100%;
+}
+
+.title-box {
+    margin: auto;
+}
+
+.notes-btn {
+    max-width: 30px;
+    height: 30px;
+    font-size: 24px;
+    padding: 0;
+    border: none;
+    background-color: aliceblue;
+}
+
+.notes-btn:hover {
+    cursor: pointer;
+}
+
+.notes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 900px;
+    height: 300px;
+    margin: auto;
+}
