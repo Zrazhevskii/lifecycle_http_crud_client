@@ -3,10 +3,9 @@ import Organizer from './components/Organizer';
 import Notes from './components/Notes';
 
 function App() {
-
     return (
         <div className='main-wrapper'>
-            <Organizer/>
+            <Organizer />
         </div>
     );
 }

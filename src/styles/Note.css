@@ -1,8 +1,19 @@
 .note {
+    position: relative;
     width: 200px;
     height: 200px;
     background-color: darkslategray;
     color: white;
     border-radius: 5px;
     padding: 8px;
+    margin-top: 10px;
+}
+
+.note-btn {
+    position: absolute;
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+    bottom: -5px;
+    right: -10px;
 }

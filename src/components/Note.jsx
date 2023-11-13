@@ -1,7 +1,15 @@
 import React from 'react';
 import '../styles/Note.css';
 
-export default function Note({ item }) {
-    // console.log(item);
-    return <div className='note'>{item.content}</div>;
+export default function Note(props) {
+    const { item, onDelet } = props;
+
+    return (
+        <div className='note'>
+            {item.content}
+            <button className='note-btn' onClick={() => onDelet(item.id)}>
+                Удалить
+            </button>
+        </div>
+    );
 }

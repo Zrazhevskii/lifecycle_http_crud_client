@@ -14,8 +14,10 @@
 
 .textarea {
     width: 800px;
+    height: 150px;
     margin: auto;
     resize: none;
+    border-radius: 5px;
 }
 
 .textarea:hover {
@@ -30,6 +32,7 @@
     height: 40px;
     margin: 10px;
     background-color: rgb(65, 43, 190);
+    border-radius: 5px;
     color: white;
 }
 

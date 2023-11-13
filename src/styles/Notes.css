@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    overflow: scroll;
     min-width: 900px;
-    min-height: 250px;
     background-color: aliceblue;
     margin-bottom: 10px;
     border-radius: 5px;
