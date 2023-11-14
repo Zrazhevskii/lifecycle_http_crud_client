@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Form from './Form';
 import Notes from './Notes';
 import axios from 'axios';

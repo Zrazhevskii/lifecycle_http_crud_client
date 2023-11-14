@@ -1,6 +1,6 @@
-import React from 'react';
 import '../styles/Notes.css';
 import Note from './Note';
+import PropTypes from 'prop-types';
 
 export default function Notes(props) {
     const { data, onUpdate, onDelet } = props;
@@ -20,4 +20,10 @@ export default function Notes(props) {
             </div>
         </div>
     );
+}
+
+Notes.propTypes = {
+  data: PropTypes.array.isRequired,
+  onUpdate: PropTypes.func.isRequired,
+  onDelet: PropTypes.func.isRequired,
 }

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/Form.css';
 
 export default function Form({ onCreate }) {
@@ -34,3 +35,7 @@ export default function Form({ onCreate }) {
         </form>
     );
 }
+
+Form.propTypes = {
+  onCreate: PropTypes.func.isRequired
+};

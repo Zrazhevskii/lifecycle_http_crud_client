@@ -1,6 +1,5 @@
 import './styles/App.css';
 import Organizer from './components/Organizer';
-import Notes from './components/Notes';
 
 function App() {
     return (
