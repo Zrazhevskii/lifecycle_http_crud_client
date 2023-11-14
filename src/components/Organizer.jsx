@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Form from './Form';
 import Notes from './Notes';
 import axios from 'axios';
@@ -27,8 +27,6 @@ export default function Organizer() {
         axios.delete(`http://localhost:3000/noutes/${id}`).then((data) => {
             setGetAddNote(data.data);
         });
-
-        // updateNotes()
     };
 
     updateNotes();
