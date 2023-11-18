@@ -4,17 +4,17 @@ import Notes from './Notes';
 import axios from 'axios';
 
 export default function Organizer() {
-    const [getAddNotes, setGetAddNote] = useState([]);
+    const [notes, setNotes] = useState([]);
 
     const url = 'http://localhost:3000/noutes/';
 
     const updateNotes = () => {
         axios.get(url).then((data) => {
-            setGetAddNote(data.data);
+            setNotes(data.data);
         });
     };
 
-    const addNotes = (value) => {
+    const createNotes = (value) => {
         axios.post(url, {
             id: value.id,
             content: value.content,
@@ -25,7 +25,7 @@ export default function Organizer() {
 
     const deletNote = (id) => {
         axios.delete(`http://localhost:3000/noutes/${id}`).then((data) => {
-            setGetAddNote(data.data);
+            setNotes(data.data);
         });
     };
 
@@ -34,11 +34,11 @@ export default function Organizer() {
     return (
         <div>
             <Notes
-                data={getAddNotes}
+                data={notes}
                 onUpdate={updateNotes}
                 onDelet={deletNote}
             />
-            <Form onCreate={addNotes} />
+            <Form onCreate={createNotes} />
         </div>
     );
 }
