@@ -19,5 +19,5 @@ Note.propTypes = {
         id: PropTypes.string.isRequired,
         content: PropTypes.string.isRequired,
     }),
-    onDelet: PropTypes.func.isRequired
-}
+    onDelet: PropTypes.func.isRequired,
+};

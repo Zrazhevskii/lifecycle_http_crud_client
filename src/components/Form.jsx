@@ -37,5 +37,5 @@ export default function Form({ onCreate }) {
 }
 
 Form.propTypes = {
-  onCreate: PropTypes.func.isRequired
+    onCreate: PropTypes.func.isRequired,
 };

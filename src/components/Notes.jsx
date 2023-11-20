@@ -6,10 +6,12 @@ export default function Notes(props) {
     const { data, onUpdate, onDelet } = props;
 
     return (() => {
-        if ( data.length === 0) {
+        if (data.length === 0) {
             return (
                 <div className='nullNotes-wrappes'>
-                    <h2 className='nullNotes-title'>Заметок нет, что-нибудь напишите?</h2>
+                    <h2 className='nullNotes-title'>
+                        Заметок нет, что-нибудь напишите?
+                    </h2>
                 </div>
             );
         } else {

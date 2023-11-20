@@ -1,7 +1,7 @@
 export const Valid = (value) => {
     if (!value.content) {
-        alert('Заполните поле')
-        return false
+        alert('Заполните поле');
+        return false;
     }
-  return true
-}
+    return true;
+};
