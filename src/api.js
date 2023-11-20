@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Valid } from './components/Valid';
 
 const url = 'http://localhost:3000/noutes/';
 
@@ -10,10 +11,12 @@ export const update = async () => {
 };
 
 export const create = async (value) => {
-    await axios.post(url, {
-        id: value.id,
-        content: value.content,
-    });
+    if (Valid(value)) {
+        await axios.post(url, {
+            id: value.id,
+            content: value.content,
+        });
+    }
 };
 
 export const delet = async (id) => {
