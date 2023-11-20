@@ -1,43 +1,39 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Form from './Form';
 import Notes from './Notes';
-import axios from 'axios';
+import { update, create, delet } from '../api';
 
 export default function Organizer() {
     const [notes, setNotes] = useState([]);
 
-    const url = 'http://localhost:3000/noutes/';
+    useEffect(() => {
+        update().then((data) => {
+            setNotes(data);
+        });
+    }, [notes]);
 
     const updateNotes = () => {
-        axios.get(url).then((data) => {
-            setNotes(data.data);
+        update().then((data) => {
+            setNotes(data);
         });
     };
 
     const createNotes = (value) => {
-        axios.post(url, {
-            id: value.id,
-            content: value.content,
-        });
-
-        updateNotes();
+        create(value);
     };
 
-    const deletNote = (id) => {
-        axios.delete(`http://localhost:3000/noutes/${id}`).then((data) => {
-            setNotes(data.data);
+    const deletNotes = (id) => {
+        delet(id).then((data) => {
+            if (typeof data === 'string') {
+                return;
+            }
+            setNotes(data);
         });
     };
-
-    updateNotes();
 
     return (
         <div>
-            <Notes
-                data={notes}
-                onUpdate={updateNotes}
-                onDelet={deletNote}
-            />
+            <Notes data={notes} onUpdate={updateNotes} onDelet={deletNotes} />
             <Form onCreate={createNotes} />
         </div>
     );
